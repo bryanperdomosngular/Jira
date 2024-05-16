@@ -1,0 +1,15 @@
+jira.Project Example_2@s {
+  key = "E2"
+  description = ""
+  name = "Example 2"
+  projectTypeKey = "software"
+  workflowScheme = jira.WorkflowScheme.instance.E2__Software_Simplified_Workflow_Scheme@fssss
+  permissionScheme = jira.PermissionScheme.instance.E2_software_permission_scheme@s
+  notificationScheme = jira.NotificationScheme.instance.Default_Notification_Scheme@s
+  issueTypeScreenScheme = jira.IssueTypeScreenScheme.instance.E2__Kanban_Issue_Type_Screen_Scheme@fsssss
+  issueTypeScheme = jira.IssueTypeScheme.instance.E2__Kanban_Issue_Type_Scheme@fssss
+  leadAccountId = {
+    id = "712020:84e7bf30-1023-405c-aa82-9aeb649906b0"
+    displayName = "Bryan Alexis Perdomo Arevalo"
+  }
+}

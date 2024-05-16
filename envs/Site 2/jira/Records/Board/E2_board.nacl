@@ -1,0 +1,46 @@
+jira.Board E2_board@s {
+  name = "E2 board"
+  type = "kanban"
+  admins = {
+    users = [
+      {
+        id = "712020:84e7bf30-1023-405c-aa82-9aeb649906b0"
+        displayName = "Bryan Alexis Perdomo Arevalo"
+      },
+    ]
+  }
+  location = {
+    projectId = jira.Project.instance.Example_2@s
+  }
+  filterId = jira.Filter.instance.Filter_for_E2_board@s
+  columnConfig = {
+    columns = [
+      {
+        name = "Backlog"
+        statuses = [
+          jira.Status.instance.backlog,
+        ]
+      },
+      {
+        name = "Selected for Development"
+        statuses = [
+          jira.Status.instance.selected_for_development@s,
+        ]
+      },
+      {
+        name = "In Progress"
+        statuses = [
+          jira.Status.instance.in_progress@s,
+        ]
+      },
+      {
+        name = "Done"
+        statuses = [
+          jira.Status.instance.done,
+        ]
+      },
+    ]
+    constraintType = "issueCount"
+  }
+  subQuery = "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+}

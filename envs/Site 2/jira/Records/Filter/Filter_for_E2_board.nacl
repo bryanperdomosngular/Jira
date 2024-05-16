@@ -1,0 +1,16 @@
+jira.Filter Filter_for_E2_board@s {
+  name = "Filter for E2 board"
+  owner = {
+    id = "712020:84e7bf30-1023-405c-aa82-9aeb649906b0"
+    displayName = "Bryan Alexis Perdomo Arevalo"
+  }
+  jql = "${ jira.Field.instance.Project__project } = ${ jira.Project.instance.Example_2@s.key } ORDER BY ${ jira.Field.instance.Rank__gh_lexo_rank__c@uubbuu.name } ASC"
+  sharePermissions = [
+    {
+      type = "project"
+      project = {
+        id = jira.Project.instance.Example_2@s
+      }
+    },
+  ]
+}
